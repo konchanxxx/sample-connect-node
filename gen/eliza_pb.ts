@@ -15,6 +15,21 @@ export class SayRequest extends Message<SayRequest> {
    */
   sentence = "";
 
+  /**
+   * @generated from field: double double_value = 2;
+   */
+  doubleValue = 0;
+
+  /**
+   * @generated from field: float float_value = 3;
+   */
+  floatValue = 0;
+
+  /**
+   * @generated from field: int32 int32_value = 4;
+   */
+  int32Value = 0;
+
   constructor(data?: PartialMessage<SayRequest>) {
     super();
     proto3.util.initPartial(data, this);
@@ -24,6 +39,9 @@ export class SayRequest extends Message<SayRequest> {
   static readonly typeName = "buf.connect.demo.eliza.v1.SayRequest";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "sentence", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "double_value", kind: "scalar", T: 1 /* ScalarType.DOUBLE */ },
+    { no: 3, name: "float_value", kind: "scalar", T: 2 /* ScalarType.FLOAT */ },
+    { no: 4, name: "int32_value", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SayRequest {
@@ -52,6 +70,21 @@ export class SayResponse extends Message<SayResponse> {
    */
   sentence = "";
 
+  /**
+   * @generated from field: double double_value = 2;
+   */
+  doubleValue = 0;
+
+  /**
+   * @generated from field: float float_value = 3;
+   */
+  floatValue = 0;
+
+  /**
+   * @generated from field: int32 int32_value = 4;
+   */
+  int32Value = 0;
+
   constructor(data?: PartialMessage<SayResponse>) {
     super();
     proto3.util.initPartial(data, this);
@@ -61,6 +94,9 @@ export class SayResponse extends Message<SayResponse> {
   static readonly typeName = "buf.connect.demo.eliza.v1.SayResponse";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "sentence", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "double_value", kind: "scalar", T: 1 /* ScalarType.DOUBLE */ },
+    { no: 3, name: "float_value", kind: "scalar", T: 2 /* ScalarType.FLOAT */ },
+    { no: 4, name: "int32_value", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SayResponse {

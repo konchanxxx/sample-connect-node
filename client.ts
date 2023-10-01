@@ -11,7 +11,12 @@ const transport = createConnectTransport({
 
 async function main() {
   const client = createPromiseClient(ElizaService, transport);
-  const res = await client.say({ sentence: "I feel happy." });
+  const res = await client.say({
+    sentence: "I feel happy.",
+    doubleValue: 1.23,
+    floatValue: 4.56,
+    int32Value: 789,
+  });
   console.log(res);
 }
 void main();

@@ -10,7 +10,10 @@ export default (router: ConnectRouter) =>
     // protoではSayと大文字だったが、こちらは小文字になっていてもいいようだ。
     async say(req) {
       return {
-        sentence: `You said: ${req.sentence}`
+        sentence: `You said: ${req.sentence}`,
+        doubleValue: req.doubleValue,
+        floatValue: req.floatValue,
+        int32Value: req.int32Value,
       }
     },
   });
